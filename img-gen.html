@@ -6,40 +6,40 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700;800&display=swap" rel="stylesheet">
 
-		<style>
-			#container {
-				width: 100%;
-				margin: 0px auto;
-			}
-			#app {
-				display: flex;
-			}
+  <style>
+   #container {
+    width: 100%;
+    margin: 0px auto;
+   }
+   #app {
+    display: flex;
+   }
    /*Input*/
-			#input {
-				width: 300px;
-				border-right: 1px solid #dddddd;
-				padding: 0px 20px 0px 0px;
-			}
-			#input #pillar_input {
-				display: flex;
-				flex-direction: column;	
-			}
+   #input {
+    width: 300px;
+    border-right: 1px solid #dddddd;
+    padding: 0px 20px 0px 0px;
+   }
+   #input #pillar_input {
+    display: flex;
+    flex-direction: column;	
+   }
 
-			#input p.label {
-				font-weight: bold;
-			}
+   #input p.label {
+    font-weight: bold;
+   }
 
-			#input #pillar_input div label {
-				margin: 0px 0px 0px 10px;
-			}
+   #input #pillar_input div label {
+    margin: 0px 0px 0px 10px;
+   }
 
-			#input button#download {
-				margin: 20px 0px 0px 0px ;
-			}
+   #input button#download {
+    margin: 20px 0px 0px 0px ;
+   }
    /*Output*/
-			#output {
-				margin: 0px 0px 0px 20px;
-			}
+   #output {
+    margin: 0px 0px 0px 20px;
+   }
 
    /*Text*/
    p, h1, h2, h3, h4, h5, label, button {
@@ -83,11 +83,11 @@
 
 
    /*16:9*/
-			#output #output_16-9 {
-				width: 1920px;
-				height: 1080px;
-				background-color: #dddddd;
-			}
+   #output #output_16-9 {
+    width: 1920px;
+    height: 1080px;
+    background-color: #dddddd;
+   }
    
    #output #output_16-9 .background_img {
     position: absolute;
@@ -125,12 +125,12 @@
    }
 
    /*1:1*/
-			#output #output_1-1 {
-				width: 1080px;
-				height: 1080px;
-				background-color: #dddddd;
+   #output #output_1-1 {
+    width: 1080px;
+    height: 1080px;
+    background-color: #dddddd;
     overflow: hidden;
-			}
+   }
 
    #output #output_1-1 .background_img {
     position: absolute;
@@ -169,12 +169,12 @@
    }
 
    /*9:16*/
-			#output #output_9-16 {
-				width: 1080px;
-				height: 1920px;
-				background-color: #dddddd;
+   #output #output_9-16 {
+    width: 1080px;
+    height: 1920px;
+    background-color: #dddddd;
     overflow: hidden;
-			}
+   }
 
    #output #output_9-16 .background_img {
     position: absolute;
@@ -188,44 +188,44 @@
     position: absolute;
     top: 0;
    } 
-		</style>
+  </style>
  </head>
-	<body>
-			<div id="container">
-				<h1>Image Generator | Pixel Vault</h1>
-				<div id="app">
-					<div id="input">
-						<h2>Controls</h2>
-						<p class="label">Pilaar</p>
-						<div id="pillar_input">
-							<div>
-								<input type="radio" id="pillar_general" name="pillar" value="general" checked>
-								<label for="pillar_general">Algemeen</label>
-							</div>
-							<div>
-								<input type="radio" id="pillar_game" name="pillar" value="game">
-								<label for="pillar_game">Game</label>
-							</div>
-							<div>
-								<input type="radio" id="pillar_gear" name="pillar" value="gear">
-								<label for="pillar_gear">Gear</label>
-							</div>
-							<div>
-								<input type="radio" id="pillar_culture" name="pillar" value="culture">
-								<label for="pillar_culture">Culture</label>
-							</div>
-						</div>
-						<p class="label">Titel</p>
-						<input type="text" id="title">
-						<p class="label">Categorie</p>
-						<input type="text" id="category">
-						<p class="label">Afbeeldings url</p>
-						<input type="text" id="imageurl">
-						<button id="download">Download de afbeeldingen</button>
-					</div>
-					<div id="output">
-						<h2>Facebook / Twitter / LinkedIn</h2>
-						<div id="output_16-9" class="output general">
+ <body>
+   <div id="container">
+    <h1>Image Generator | Pixel Vault</h1>
+    <div id="app">
+     <div id="input">
+      <h2>Controls</h2>
+      <p class="label">Pilaar</p>
+      <div id="pillar_input">
+       <div>
+        <input type="radio" id="pillar_general" name="pillar" value="general" checked>
+        <label for="pillar_general">Algemeen</label>
+       </div>
+       <div>
+        <input type="radio" id="pillar_game" name="pillar" value="game">
+        <label for="pillar_game">Game</label>
+       </div>
+       <div>
+        <input type="radio" id="pillar_gear" name="pillar" value="gear">
+        <label for="pillar_gear">Gear</label>
+       </div>
+       <div>
+        <input type="radio" id="pillar_culture" name="pillar" value="culture">
+        <label for="pillar_culture">Culture</label>
+       </div>
+      </div>
+      <p class="label">Titel</p>
+      <input type="text" id="title">
+      <p class="label">Categorie</p>
+      <input type="text" id="category">
+      <p class="label">Afbeeldings url</p>
+      <input type="text" id="imageurl">
+      <button id="download">Download de afbeeldingen</button>
+     </div>
+     <div id="output">
+      <h2>Facebook / Twitter / LinkedIn</h2>
+      <div id="output_16-9" class="output general">
        <div style="position: relative;">
         <div class="overlay" style="background: url('./img/overlay_16-9_general.png'); background-size: cover; background-repeat: no-repeat;">
           <h4 class="category">Categorie</h4>
@@ -234,9 +234,9 @@
         </div>
         <img src="https://cdn.pixelvault.nl/wp-content/uploads/2021/05/NieRReplicant_ver122_MAGIC1.jpg" class="background_img" crossorigin="anonymous">
        </div>
-						</div>
-						<h2>Instagram - Feed</h2>
-						<div id="output_1-1" class="output general">
+      </div>
+      <h2>Instagram - Feed</h2>
+      <div id="output_1-1" class="output general">
        <div style="position: relative;">
         <div class="overlay" style="background: url('./img/overlay_1-1_general.png'); background-size: cover; background-repeat: no-repeat;">
           <h5 class="pillar">Pixel Vault</h5>
@@ -248,8 +248,8 @@
         <img src="https://cdn.pixelvault.nl/wp-content/uploads/2021/05/NieRReplicant_ver122_MAGIC1.jpg" class="background_img" crossorigin="anonymous">
        </div>				
       </div>
-						<h2>Instagram - Story</h2>
-						<div id="output_9-16" class="output general">
+      <h2>Instagram - Story</h2>
+      <div id="output_9-16" class="output general">
        <div style="position: relative;">
         <div class="overlay" style="background: url('./img/overlay_9-16_general.png'); background-size: cover; background-repeat: no-repeat;">
           <h4 class="category">Categorie</h4>
@@ -258,30 +258,30 @@
         </div>
         <img src="https://cdn.pixelvault.nl/wp-content/uploads/2021/05/NieRReplicant_ver122_MAGIC1.jpg" class="background_img" crossorigin="anonymous">
        </div>      
-						</div>
-					</div>
-				</div>
-			</div>
-	</body>
-	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-	<script src="./dom-to-image-improved.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js" integrity="sha512-csNcFYJniKjJxRWRV1R7fvnXrycHP6qDR21mgz1ZP55xY5d+aHLfo9/FcGDQLfn2IfngbAHd8LdfsagcCqgTcQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-	<script>
-		$(document).ready(function(){
-			$("#download").click(function(){
-				domtoimage.toBlob(document.getElementById('output_16-9'), {cacheBust:true})
+      </div>
+     </div>
+    </div>
+   </div>
+ </body>
+ <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+ <script src="./dom-to-image-improved.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js" integrity="sha512-csNcFYJniKjJxRWRV1R7fvnXrycHP6qDR21mgz1ZP55xY5d+aHLfo9/FcGDQLfn2IfngbAHd8LdfsagcCqgTcQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+ <script>
+  $(document).ready(function(){
+   $("#download").click(function(){
+    domtoimage.toBlob(document.getElementById('output_16-9'), {cacheBust:true})
     .then(function (blob) {
         window.saveAs(blob, 'my-node.png');
     });
-				/*domtoimage.toBlob(document.getElementById('output_1-1'), {})
-				.then(function (blob_11) {
-					window.saveAs(blob_11, 'output_1-1.png');
-				});
-				domtoimage.toBlob(document.getElementById('output_9-16'), {})
-				.then(function (blob_916) {
-					window.saveAs(blob_916, 'output_9-16.png');
-				});*/
-			});
+    /*domtoimage.toBlob(document.getElementById('output_1-1'), {})
+    .then(function (blob_11) {
+     window.saveAs(blob_11, 'output_1-1.png');
+    });
+    domtoimage.toBlob(document.getElementById('output_9-16'), {})
+    .then(function (blob_916) {
+     window.saveAs(blob_916, 'output_9-16.png');
+    });*/
+   });
 
    $('input[name=pillar]').change(function() {
     if($(this).val() == "general"){   
@@ -337,6 +337,6 @@
    });
 
 
-		})
-	</script>
+  })
+ </script>
 </html>
