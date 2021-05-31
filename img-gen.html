@@ -159,6 +159,25 @@
     margin: 0px 0px 0px 10px;
    }
 
+   #input .sliderContainer {
+    width: 100%;
+   }
+
+   #input .sliderContainer .sliderBox {
+    display: flex;
+    width: 100%;
+   }
+
+   #input .sliderContainer .sliderBox input {
+    width: 90%;
+    margin: 0px 10px 0px 0px;
+   }
+
+   #input .sliderContainer .sliderBox p {
+    width: 10%;
+    text-align: right;
+   }
+
    #input button#download {
     position: fixed;
     bottom: 20px;
@@ -356,6 +375,14 @@
       <input type="text" id="category">
       <p class="label">Afbeeldings url</p>
       <input type="text" id="imageurl">
+      
+      <div class="sliderContainer">
+       <p class="label">Positie afbeelding - Insta feed</p>
+       <div class="sliderBox">
+        <input type="range" min="0" max="100" value="50" id="slide_1-1_posx" class="slider">
+        <p class="sliderValue" id="slide_1-1_posx_output">50%</p>
+       </div>
+      </div>
       <div class="button_div">
        <input type="file" data-for="image" id="image" class="input" accept="image/gif, image/jpeg, image/png" name="image" style="display: none;">
        <label for="image" class="button upload">of upload een afbeelding</label>
@@ -425,6 +452,13 @@
    $("#imageurl").on("input", function(){
     $(".background_img").attr('src',$(this).val());
    });
+
+   //Slider magie
+   $("#slide_1-1_posx").on("input", function(){
+    $("#slide_1-1_posx_output").text($(this).val() + '%');
+    $("#output #output_1-1 .background_img").css('left','calc(-50% + ' + $(this).val() + '%)')
+   });
+   
 
    //Verander classes en CSS op basis van pilaar
    $('input[name=pillar]').change(function() {
