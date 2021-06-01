@@ -219,7 +219,7 @@ div.pillar {
 }
 
 #input div.button_div {
- margin: 10px 0px 0px 0px;
+ margin: 20px 0px 50px 0px;
 }
 /*Output*/
 #output {
@@ -406,22 +406,24 @@ div.pillar {
  max-height: 880px;
  max-width: 1564px;
  border: 20px solid #ffffff;
+ background-color: #333333;
  position: absolute;
  margin: auto;
  top: 0;
  left: 0;
  right: 0;
  bottom: 0;
+ filter: drop-shadow(0 0 40px #33333325);
 }
 
 #output #output_art .art_background {
- width: calc(100% + 16px);
- filter: blur(8px);
- -webkit-filter: blur(8px);
+ width: calc(100% + 40px);
+ filter: blur(20px);
+ -webkit-filter: blur(20px);
  position: absolute;
  margin: auto;
  top: 0;
- left: -8px;
+ left: -20px;
  right: 0;
  bottom: 0;
  z-index: -1;
