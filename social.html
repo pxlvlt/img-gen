@@ -38,6 +38,10 @@
       <input type="text" id="category">
       <p class="label">Afbeeldings url</p>
       <input type="text" id="imageurl">
+      <div class="button_div">
+       <input type="file" data-for="image" id="image" class="input" accept="image/gif, image/jpeg, image/png" name="image" style="display: none;">
+       <label for="image" class="button upload">of upload een afbeelding</label>
+      </div>
       <div class="sliderContainer">
        <p class="label">Positie afbeelding - Insta feed</p>
        <div class="sliderBox">
@@ -51,10 +55,6 @@
         <input type="range" min="-75" max="0" value="-50" id="slide_9-16_posx" class="slider">
         <p class="sliderValue" id="slide_9-16_posx_output">-50%</p>
        </div>
-      </div>
-      <div class="button_div">
-       <input type="file" data-for="image" id="image" class="input" accept="image/gif, image/jpeg, image/png" name="image" style="display: none;">
-       <label for="image" class="button upload">of upload een afbeelding</label>
       </div>
       <button id="download" class="button download">Download de afbeeldingen</button>
      </div>
