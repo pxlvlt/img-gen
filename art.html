@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>Image Generator | Pixel Vault</title>
+  <link href="./css/style.css" rel="stylesheet">
+  <link href="./css/fonts.css" rel="stylesheet">
+  <link href="./fonts/fa/all.css" rel="stylesheet">
+ </head>
+ <body>
+   <div id="container">
+    <div id="header">
+    </div>
+    <div id="app">
+     <div id="input">
+      <h2>Controls</h2>
+      <p class="label">Afbeeldings url</p>
+      <input type="text" id="imageurl">
+      <div class="button_div">
+       <input type="file" data-for="image" id="image" class="input" accept="image/gif, image/jpeg, image/png" name="image" style="display: none;">
+       <label for="image" class="button upload">of upload een afbeelding</label>
+      </div>
+      <button id="download" class="button download">Download de afbeelding</button>
+     </div>
+     <div id="output">
+      <h2>Cover / Art image</h2>
+      <div id="output_art" class="output general">
+       <div class="image_screen">
+        <img src="" class="art_image" crossorigin="anonymous">
+        <img src="" class="art_background" crossorigin="anonymous">
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+ </body>
+ <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+ <script src="./js/dom-to-image-improved.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js" integrity="sha512-csNcFYJniKjJxRWRV1R7fvnXrycHP6qDR21mgz1ZP55xY5d+aHLfo9/FcGDQLfn2IfngbAHd8LdfsagcCqgTcQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+ <script src="./js/scripts.js"></script>
+ <script>
+
+  $(document).ready(function(){
+   $("#imageurl").on("input", function(){
+    $(".art_image").attr('src',$(this).val());
+    $(".art_background").attr('src',$(this).val());
+   });
+
+   //Gebruik afbeelding
+   $("#image").change(function () {
+    if (this.files && this.files[0]) {
+     var reader = new FileReader();
+     reader.onload = function (e) {
+      $('.art_image').attr('src', e.target.result);
+      $(".art_background").attr('src', e.target.result);
+     }
+     reader.readAsDataURL(this.files[0]);
+    }
+   });
+
+   //Download de plaatjes
+   $("#download").click(function(){
+    var x = new Date();
+    var y = x.getFullYear().toString();
+    var m = (x.getMonth() + 1).toString();
+    var d = x.getDate().toString();
+    var hh = x.getHours().toString();
+    var mm = x.getMinutes().toString();
+    (d.length == 1) && (d = '0' + d);
+    (m.length == 1) && (m = '0' + m);
+    (hh.length == 1) && (hh = '0' + hh);
+    (mm.length == 1) && (mm = '0' + mm);
+    var date = y + m + d + '_' + hh + mm;
+
+    domtoimage.toJpeg(document.getElementById('output_art'), {cacheBust:true, quality: 0.9, width: 1920, height: 1080})
+    .then(function (dataUrl) {
+        var link = document.createElement('a');
+        link.download = date + '_art.jpeg';
+        link.href = dataUrl;
+        link.click();
+    });
+   });
+  })
+ </script>
+</html>

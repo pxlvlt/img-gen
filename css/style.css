@@ -234,6 +234,10 @@ div.pillar {
  width: 100%;
 }
 
+#output_art .image_screen {
+ position: relative;
+}
+
 /*16:9*/
 #output #output_16-9 {
  width: 1920px;
@@ -388,4 +392,37 @@ div.pillar {
 
 #output #output_9-16 h3.title {
  font-size: 75px;
+}
+
+/*Output - Art*/
+#output #output_art {
+ width: 1920px;
+ height: 1080px;
+ background-color: rgba(51, 51, 51, 0.25);
+ overflow: hidden;
+}
+
+#output #output_art .art_image {
+ max-height: 880px;
+ max-width: 1564px;
+ border: 20px solid #ffffff;
+ position: absolute;
+ margin: auto;
+ top: 0;
+ left: 0;
+ right: 0;
+ bottom: 0;
+}
+
+#output #output_art .art_background {
+ width: calc(100% + 16px);
+ filter: blur(8px);
+ -webkit-filter: blur(8px);
+ position: absolute;
+ margin: auto;
+ top: 0;
+ left: -8px;
+ right: 0;
+ bottom: 0;
+ z-index: -1;
 }
