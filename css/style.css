@@ -127,6 +127,14 @@ body,
  text-decoration: none;
 }
 
+#header .menu li a.external:after {
+ margin-left: 10px;
+ font-family: "Font Awesome 5 Pro"; 
+ font-weight: 900; 
+ content: "\f35d";
+ color: #dddddd;
+}
+
 #header .logo {
  background-image: url('/img/logo-pixelvault.png');
  background-repeat: no-repeat;
