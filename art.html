@@ -5,6 +5,15 @@
   <link href="./css/style.css" rel="stylesheet">
   <link href="./css/fonts.css" rel="stylesheet">
   <link href="./fonts/fa/all.css" rel="stylesheet">
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-H0NS8Y13PY"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-H0NS8Y13PY');
+  </script>
  </head>
  <body>
    <div id="container">
@@ -25,8 +34,8 @@
       <h2>Cover / Art image</h2>
       <div id="output_art" class="output general">
        <div class="image_screen">
-        <img src="" class="art_image" crossorigin="anonymous">
-        <img src="" class="art_background" crossorigin="anonymous">
+        <img src="./img/dummyimg.jpg" class="art_image" crossorigin="anonymous">
+        <img src="./img/dummyimg.jpg" class="art_background" crossorigin="anonymous">
        </div>
       </div>
      </div>
@@ -71,7 +80,7 @@
     (mm.length == 1) && (mm = '0' + mm);
     var date = y + m + d + '_' + hh + mm;
 
-    domtoimage.toJpeg(document.getElementById('output_art'), {cacheBust:true, quality: 0.9, width: 1920, height: 1080})
+    domtoimage.toJpeg(document.getElementById('output_art'), {cacheBust:true, quality: 1, width: 1920, height: 1080})
     .then(function (dataUrl) {
         var link = document.createElement('a');
         link.download = date + '_art.jpeg';

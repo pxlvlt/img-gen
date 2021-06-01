@@ -5,6 +5,15 @@
   <link href="./css/style.css" rel="stylesheet">
   <link href="./css/fonts.css" rel="stylesheet">
   <link href="./fonts/fa/all.css" rel="stylesheet">
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-H0NS8Y13PY"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-H0NS8Y13PY');
+  </script>
  </head>
  <body>
    <div id="container">
@@ -45,14 +54,14 @@
       <div class="sliderContainer">
        <p class="label">Positie afbeelding - Insta feed</p>
        <div class="sliderBox">
-        <input type="range" min="-75" max="0" value="-50" id="slide_1-1_posx" class="slider">
+        <input type="range" min="-100" max="0" value="-50" id="slide_1-1_posx" class="slider">
         <p class="sliderValue" id="slide_1-1_posx_output">-50%</p>
        </div>
       </div>
       <div class="sliderContainer">
        <p class="label">Positie afbeelding - Insta story</p>
        <div class="sliderBox">
-        <input type="range" min="-75" max="0" value="-50" id="slide_9-16_posx" class="slider">
+        <input type="range" min="-100" max="0" value="-50" id="slide_9-16_posx" class="slider">
         <p class="sliderValue" id="slide_9-16_posx_output">-50%</p>
        </div>
       </div>
@@ -72,7 +81,7 @@
          </div>
         </div>
         <div class="image_screen">
-         <img src="" class="background_img" crossorigin="anonymous">
+         <img src="./img/dummyimg.jpg" class="background_img" crossorigin="anonymous">
         </div>
        </div>
       </div>
@@ -89,7 +98,7 @@
          </div>
         </div>
         <div class="image_screen">
-         <img src="" class="background_img" crossorigin="anonymous">
+         <img src="./img/dummyimg.jpg" class="background_img" crossorigin="anonymous">
         </div>       
        </div>				
       </div>
@@ -106,7 +115,7 @@
          </div>
         </div>
         <div class="image_screen">
-         <img src="" class="background_img" crossorigin="anonymous">
+         <img src="./img/dummyimg.jpg" class="background_img" crossorigin="anonymous">
         </div>       
        </div>			   
       </div>
@@ -135,7 +144,7 @@
    //Slider magie
    $("#slide_1-1_posx").on("input", function(){
     $("#slide_1-1_posx_output").text($(this).val() + '%');
-    $("#output #output_1-1 .background_img").css('left',$(this).val() + '%')
+    $("#output #output_1-1 .background_img").css('left','calc(10% + ' + $(this).val() + '%)')
    });
 
    $("#slide_9-16_posx").on("input", function(){
