@@ -136,7 +136,7 @@ body,
 }
 
 #header .logo {
- background-image: url('/img/logo-pixelvault.png');
+ background-image: url('../img/logo-pixelvault.png');
  background-repeat: no-repeat;
  background-position: center right 40px;
  background-size: 200px
