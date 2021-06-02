@@ -80,7 +80,7 @@
     (mm.length == 1) && (mm = '0' + mm);
     var date = y + m + d + '_' + hh + mm;
 
-    domtoimage.toJpeg(document.getElementById('output_art'), {cacheBust:true, quality: 1, width: 1920, height: 1080})
+    domtoimage.toJpeg(document.getElementById('output_art'), {cacheBust:true, quality: 0.95, width: 1920, height: 1080})
     .then(function (dataUrl) {
         var link = document.createElement('a');
         link.download = date + '_art.jpeg';
