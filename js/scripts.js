@@ -8,3 +8,9 @@ oReq.send();
 function reqListener () {
  sidebar.innerHTML = this.responseText;
 };
+
+//Maak div's clickable
+$(".item").click(function(){
+ window.location=$(this).find("a").attr("href");
+ return false;
+});

@@ -158,7 +158,7 @@ div.pillar {
  transform: skewX(15deg);
 }
 
-/*Content*/
+/*Home - Content*/
 .intro {
  width: 60%;
 }
@@ -169,6 +169,45 @@ div.pillar {
 
 .intro p a {
  color: #11d3be;
+}
+
+/*Home - menu*/
+#menu {
+ display: flex;
+ flex-wrap: wrap;
+}
+
+#menu .item {
+ width: 10%;
+ background-color: #ffffff;
+ margin: 0px 20px 20px 0px;
+ padding: 20px;
+ border: 1px solid #dddddd;
+ border-radius: 5px;
+ cursor: pointer;
+ transition: 300ms;
+}
+
+#menu .item a {
+ text-decoration: none;
+ color: #333333;
+}
+
+#menu .item img {
+ max-width: 100%;
+ margin: 0px auto;
+}
+
+#menu .item p {
+ font-weight: bold;
+ text-transform: uppercase;
+ text-align: center;
+ margin: 20px 0px 0px 0px;
+}
+
+#menu .item:hover {
+ filter: drop-shadow(2px 2px 3px #33333325);
+ transform: translate(-3px,-3px);
 }
 
 /*Input*/
