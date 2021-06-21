@@ -4,6 +4,7 @@
 }
 #app {
  display: flex;
+ flex-flow: row;
 }
 
 /*Text*/
@@ -85,6 +86,7 @@ body,
 #container {
  margin: 0px auto;
  display: flex;
+ width: 100%;
 }
 
 #header {
@@ -99,6 +101,14 @@ body,
  background: rgb(78,0,185);
  background: linear-gradient(45deg, #4e00b9 0%, #11d3be 100%);
  color: #ffffff;
+ display: flex;
+ flex-wrap: nowrap;
+ align-items: center;
+ justify-content: space-between;
+}
+
+#header .logo {
+ width: 200px;
 }
 
 #header .menu {
@@ -135,16 +145,13 @@ body,
  color: #dddddd;
 }
 
-#header .logo {
- background-image: url('../img/logo-pixelvault.png');
- background-repeat: no-repeat;
- background-position: center right 40px;
- background-size: 200px
+#header .logobar i {
+ display: none;
 }
 
 #app,
 #content {
- padding: 146px 0px 0px 0px;
+ padding: 153px 0px 0px 0px;
 }
 
 #content {
@@ -159,10 +166,6 @@ div.pillar {
 }
 
 /*Home - Content*/
-.intro {
- width: 60%;
-}
-
 .intro p {
  margin: 0px 0px 20px 0px;
 }
@@ -173,14 +176,14 @@ div.pillar {
 
 /*Home - menu*/
 #menu {
- display: flex;
- flex-wrap: wrap;
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+ columns: 4;
+ gap: 20px;
 }
 
 #menu .item {
- width: 10%;
  background-color: #ffffff;
- margin: 0px 20px 20px 0px;
  padding: 20px;
  border: 1px solid #dddddd;
  border-radius: 5px;
@@ -207,7 +210,7 @@ div.pillar {
 
 #menu .item:hover {
  filter: drop-shadow(2px 2px 3px #33333325);
- transform: translate(-3px,-3px);
+ transform: scale(1.02);
 }
 
 /*Input*/
@@ -217,7 +220,6 @@ div.pillar {
  border-right: 1px solid #dddddd;
  background-color: #ffffff;
  padding: 0px 20px 20px 20px;
- position: fixed;
 }
 
 #input #pillar_input {
@@ -243,26 +245,49 @@ div.pillar {
 }
 
 #input .sliderContainer .sliderBox input {
- width: 90%;
+ width: 70%;
  margin: 0px 10px 0px 0px;
 }
 
 #input .sliderContainer .sliderBox p {
- width: 10%;
+ width: 30%;
  text-align: right;
 }
 
 #input button#download {
- position: fixed;
- bottom: 20px;
+ margin: 20px 0px;
 }
 
 #input div.button_div {
- margin: 20px 0px 50px 0px;
+ margin: 20px 0px 0px 0px;
 }
+
+#input .margin-bottom {
+ margin-bottom: 30px !important;
+}
+
+/*Input - Featured floating*/
+#input #pillar_input div label.rainbow {
+ background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
+ -webkit-background-clip: text;
+ -webkit-text-fill-color: rgba(51, 51, 51, 0.25);
+ font-weight: bold;
+}
+
+#input div#featured_floating_img-1 div.button_div,
+#input div#featured_floating_img-2 div.button_div,
+#input div#featured_floating_img-3 div.button_div {
+ margin: 20px 0px 20px 0px;
+}
+
+#input div#featured_floating_img-1,
+#input div#featured_floating_img-2,
+#input div#featured_floating_img-3 {
+ margin: 0px 0px 30px 0px;
+}
+
 /*Output*/
 #output {
- margin: 0px 0px 0px 340px;
  padding: 0px 20px 20px 20px;
  z-index: -1;
 }
@@ -274,7 +299,8 @@ div.pillar {
 }
 
 #output_art .image_screen,
-#output_gear .image_screen {
+#output_gear .image_screen,
+#output_featured-floating .image_screen {
  position: relative;
 }
 
@@ -511,4 +537,149 @@ div.pillar {
  position: relative;
  top: -110%;
  left: -30%;
+}
+
+/*Output - Featured floating*/
+#output #output_featured-floating {
+ width: 1920px;
+ height: 1080px;
+ overflow: hidden;
+}
+
+#output #output_featured-floating.output.general {
+ background: rgb(17,211,190);
+ background: linear-gradient(-138deg, rgba(17,211,190,1) 0%, rgba(78,0,185,1) 100%);
+}
+
+#output #output_featured-floating.output.game {
+ background: rgb(0,176,220);
+ background: linear-gradient(-138deg, rgba(0,176,220,1) 0%, rgba(0,50,152,1) 100%);
+}
+
+#output #output_featured-floating.output.gear {
+ background: rgb(17,211,190);
+ background: linear-gradient(-138deg, rgba(17,211,190,1) 0%, rgba(0,159,116,1) 100%);
+}
+
+#output #output_featured-floating.output.culture {
+ background: rgb(221,73,234);
+ background: linear-gradient(-138deg, rgba(221,73,234,1) 0%, rgba(78,0,185,1) 100%);
+}
+
+#output #output_featured-floating.output.rainbow {
+ background: rgb(233,165,165);
+ background: linear-gradient(-138deg, rgba(233,165,165,1) 0%, rgba(184,193,192,1) 25%, rgba(101,192,224,1) 50%, rgba(174,162,219,1) 75%, rgba(129,193,217,1) 100%);
+}
+
+#output #output_featured-floating .image_screen #image_1,
+#output #output_featured-floating .image_screen #image_2,
+#output #output_featured-floating .image_screen #image_3 {
+ width: 35%;
+ overflow: hidden;
+ transform: skewX(-15deg);
+ position: absolute;
+ top: 0;
+ bottom: 0;
+ margin: auto;
+ filter: drop-shadow(0 0 10px #33333325);
+ background-color: #dddddd;
+ }
+
+#output #output_featured-floating .image_screen #image_1 {
+ height: 780px;
+ left: 150px;
+ z-index: 1;
+}
+
+#output #output_featured-floating .image_screen #image_2 {
+ height: 980px;
+ left: 0;
+ right: 0;
+ z-index: 3;
+}
+
+#output #output_featured-floating .image_screen #image_3 {
+ height: 780px;
+ right: 150px;
+ z-index: 2;
+}
+
+#output #output_featured-floating .image_screen #image_1 img,
+#output #output_featured-floating .image_screen #image_2 img,
+#output #output_featured-floating .image_screen #image_3 img {
+ transform: skewX(15deg);
+ min-width: 940px;
+ max-width: 1920px;
+ min-height: 1080px;
+ position: absolute;
+ top: 0;
+ bottom: 0;
+ left: -50%;
+ margin: auto;
+}
+
+/* Large screens */
+@media screen and (min-width: 2000px) {
+ #input button#download {
+  position: fixed;
+  bottom: 20px;
+ }
+}
+
+/*Mobile*/
+@media screen and (max-width: 768px) {
+ /* Header */
+ #header .menu {
+  display: none;
+ }
+
+ #header h1 {
+  display: none !important;
+ }
+ 
+ /* Menu */
+
+ #header .logobar #mobMenuIcon {
+  color: #ffffff;
+  cursor: pointer;
+  display: block
+ }
+
+ /* Content */
+ #app, #content {
+  padding-top: 81px;
+ }
+}
+
+@media screen and (max-width: 426px) {
+ /* Header */
+ #header .logo {
+  width: 150px
+ }
+
+ #app, #content {
+  padding-top: 69px;
+  margin-bottom: 20px;
+ }
+
+ /* Menu */
+ #navbar.menu.active {
+  display: block;
+ }
+
+ #navbar.menu.active li, 
+ #navbar.menu.active li a {
+  width: 100%;
+  display: block;
+  padding: 10px;
+ }
+
+ #navbar.menu.active li:not(:first-child) {
+  border-top: 1px solid #dddddd
+ }
+
+ #navbar.menu.active li:active, 
+ #navbar.menu.active li:hover {
+  background-color: rgba(17, 211, 190, 0.25);
+ }
 }
