@@ -23,9 +23,3 @@
   window.location=$(this).find("a").attr("href");
   return false;
  });
-
- //Download notificatie
- function downloadNotify(message, wait) {
-  $("#notificationBox p").text(message);
-  
- };
