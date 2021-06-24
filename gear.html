@@ -5,6 +5,7 @@
   <link href="./css/style.css" rel="stylesheet">
   <link href="./css/fonts.css" rel="stylesheet">
   <link href="./font/fa/css/all.css" rel="stylesheet">
+  <link rel="icon" href="https://cdn.pixelvault.nl/wp-content/uploads/2020/04/cropped-favicon-32x32.png" sizes="32x32">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-H0NS8Y13PY"></script>
@@ -17,40 +18,46 @@
   </script>
  </head>
  <body>
-   <div id="container">
-    <div id="header">
-    </div>
-    <div id="app">
-     <div id="input">
-      <h2>Controls</h2>
-      <div class="sliderContainer">
-       <p class="label">Roteer achtergrond</p>
-       <div class="sliderBox">
-        <input type="range" min="0" max="360" value="180" id="slide_gear_background" class="slider">
-        <p class="sliderValue" id="slide_gear_background_output">0&deg;</p>
-       </div>
+  <div id="container">
+   <div id="header">
+   </div>
+   <div id="app">
+    <div id="input">
+     <h2>Controls</h2>
+     <div class="sliderContainer">
+      <p class="label">Roteer achtergrond</p>
+      <div class="sliderBox">
+       <input type="range" min="0" max="360" value="180" id="slide_gear_background" class="slider">
+       <p class="sliderValue" id="slide_gear_background_output">0&deg;</p>
       </div>
-      <p class="label">Afbeeldings url</p>
-      <input type="text" id="imageurl">
-      <div class="button_div">
-       <input type="file" data-for="image" id="image" class="input" accept="image/gif, image/jpeg, image/png" name="image" style="display: none;">
-       <label for="image" class="button upload">of upload een afbeelding</label>
-      </div>
-      <button id="download" class="button download">Download de afbeelding</button>
      </div>
-     <div id="output">
-      <h2>Gear image</h2>
-      <div id="output_gear" class="output general">
-       <div class="image_screen">
-        <img src="" class="gear_image" crossorigin="anonymous">
-        <div class="gear_background">
-         <div class="gear_block"></div>
-        </div>
+     <p class="label">Afbeeldings url</p>
+     <input type="text" id="imageurl">
+     <div class="button_div">
+      <input type="file" data-for="image" id="image" class="input" accept="image/gif, image/jpeg, image/png" name="image" style="display: none;">
+      <label for="image" class="button upload">of upload een afbeelding</label>
+     </div>
+     <button id="download" class="button download">Download de afbeelding</button>
+    </div>
+    <div id="output">
+     <h2>Gear image</h2>
+     <div id="output_gear" class="output general">
+      <div class="image_screen">
+       <img src="" class="gear_image" crossorigin="anonymous">
+       <div class="gear_background">
+        <div class="gear_block"></div>
        </div>
       </div>
      </div>
     </div>
    </div>
+  </div>
+  <div id="notificationBox">
+   <div class="notificationContent">
+    <i class="fas fa-file-export"></i>
+    <p>Even geduld! Je afbeelding komt eraan.</p>
+   </div>
+  </div>
  </body>
  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
  <script src="./js/dom-to-image-improved.js"></script>
@@ -86,6 +93,11 @@
 
    //Download de plaatjes
    $("#download").click(function(){
+    $("#notificationBox").addClass("show").delay(5000).queue(function(next){
+     $(this).removeClass("show");
+     next();
+    });
+
     var x = new Date();
     var y = x.getFullYear().toString();
     var m = (x.getMonth() + 1).toString();

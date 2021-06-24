@@ -5,6 +5,7 @@
   <link href="./css/style.css" rel="stylesheet">
   <link href="./css/fonts.css" rel="stylesheet">
   <link href="./font/fa/css/all.css" rel="stylesheet">
+  <link rel="icon" href="https://cdn.pixelvault.nl/wp-content/uploads/2020/04/cropped-favicon-32x32.png" sizes="32x32">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-H0NS8Y13PY"></script>
@@ -17,113 +18,119 @@
   </script>
  </head>
  <body>
-   <div id="container">
-    <div id="header">
-    </div>
-    <div id="app">
-     <div id="input">
-      <h2>Controls</h2>
-      <p class="label">Pilaar</p>
-      <div id="pillar_input">
-       <div>
-        <input type="radio" id="pillar_general" name="pillar" value="general" checked>
-        <label for="pillar_general">Algemeen</label>
-       </div>
-       <div>
-        <input type="radio" id="pillar_game" name="pillar" value="game">
-        <label for="pillar_game">Game</label>
-       </div>
-       <div>
-        <input type="radio" id="pillar_gear" name="pillar" value="gear">
-        <label for="pillar_gear">Gear</label>
-       </div>
-       <div>
-        <input type="radio" id="pillar_culture" name="pillar" value="culture">
-        <label for="pillar_culture">Culture</label>
-       </div>
-       <div>
-        <input type="radio" id="pillar_rainbow" name="pillar" value="rainbow">
-        <label for="pillar_rainbow" class="rainbow">Rainbow</label>
-       </div>
+  <div id="container">
+   <div id="header">
+   </div>
+   <div id="app">
+    <div id="input">
+     <h2>Controls</h2>
+     <p class="label">Pilaar</p>
+     <div id="pillar_input">
+      <div>
+       <input type="radio" id="pillar_general" name="pillar" value="general" checked>
+       <label for="pillar_general">Algemeen</label>
       </div>
-      <div id="featured_floating_img-1">
-       <p class="label">Afbeelding links</p>
-       <input type="text" id="imageurl_1">
-       <div class="button_div">
-        <input type="file" data-for="image" id="image_1" class="input" accept="image/gif, image/jpeg, image/png" name="image_1" style="display: none;">
-        <label for="image_1" class="button upload">of upload een afbeelding</label>
-       </div>
-       <div class="sliderContainer">
-        <p class="label">Positie afbeelding links</p>
-        <div class="sliderBox">
-         <input type="range" min="-100" max="0" value="-50" id="slide_img-1_posx" class="slider">
-         <p class="sliderValue" id="slide_img-1_posx_output">X: -50%</p>
-        </div>
-        <div class="sliderBox">
-         <input type="range" min="-100" max="100" value="0" id="slide_img-1_posy" class="slider">
-         <p class="sliderValue" id="slide_img-1_posy_output">Y: -0%</p>
-        </div>
-       </div>
+      <div>
+       <input type="radio" id="pillar_game" name="pillar" value="game">
+       <label for="pillar_game">Game</label>
       </div>
-      <div id="featured_floating_img-2">
-       <p class="label">Afbeelding midden</p>
-       <input type="text" id="imageurl_2">
-       <div class="button_div">
-        <input type="file" data-for="image" id="image_2" class="input" accept="image/gif, image/jpeg, image/png" name="image_2" style="display: none;">
-        <label for="image_2" class="button upload">of upload een afbeelding</label>
-       </div>
-       <div class="sliderContainer">
-        <p class="label">Positie afbeelding midden</p>
-        <div class="sliderBox">
-         <input type="range" min="-100" max="0" value="-50" id="slide_img-2_posx" class="slider">
-         <p class="sliderValue" id="slide_img-2_posx_output">X: -50%</p>
-        </div>
-        <div class="sliderBox">
-         <input type="range" min="-100" max="100" value="0" id="slide_img-2_posy" class="slider">
-         <p class="sliderValue" id="slide_img-2_posy_output">Y: -0%</p>
-        </div>
-       </div>
+      <div>
+       <input type="radio" id="pillar_gear" name="pillar" value="gear">
+       <label for="pillar_gear">Gear</label>
       </div>
-      <div id="featured_floating_img-3">
-       <p class="label">Afbeelding rechts</p>
-       <input type="text" id="imageurl_3">
-       <div class="button_div">
-        <input type="file" data-for="image" id="image_3" class="input" accept="image/gif, image/jpeg, image/png" name="image_3" style="display: none;">
-        <label for="image_3" class="button upload">of upload een afbeelding</label>
-       </div>
-       <div class="sliderContainer">
-        <p class="label">Positie afbeelding rechts</p>
-        <div class="sliderBox">
-         <input type="range" min="-100" max="0" value="-50" id="slide_img-3_posx" class="slider">
-         <p class="sliderValue" id="slide_img-3_posx_output">X: -50%</p>
-        </div>
-        <div class="sliderBox">
-         <input type="range" min="-100" max="100" value="0" id="slide_img-3_posy" class="slider">
-         <p class="sliderValue" id="slide_img-3_posy_output">Y: -0%</p>
-        </div>
-       </div>
+      <div>
+       <input type="radio" id="pillar_culture" name="pillar" value="culture">
+       <label for="pillar_culture">Culture</label>
       </div>
-      <button id="download" class="button download">Download de afbeelding</button>
+      <div>
+       <input type="radio" id="pillar_rainbow" name="pillar" value="rainbow">
+       <label for="pillar_rainbow" class="rainbow">Rainbow</label>
+      </div>
      </div>
-     <div id="output">
-      <h2>Featured floating</h2>
-      <div id="output_featured-floating" class="output general">
-        <div class="image_screen">
-         <div id="image_1">
-          <img src="./img/dummyimg.jpg" class="img_1" crossorigin="anonymous">
-         </div>
-         <div id="image_2">
-          <img src="./img/dummyimg.jpg" class="img_2" crossorigin="anonymous">
-         </div>
-         <div id="image_3">
-          <img src="./img/dummyimg.jpg" class="img_3" crossorigin="anonymous">
-         </div>
+     <div id="featured_floating_img-1">
+      <p class="label">Afbeelding links</p>
+      <input type="text" id="imageurl_1">
+      <div class="button_div">
+       <input type="file" data-for="image" id="image_1" class="input" accept="image/gif, image/jpeg, image/png" name="image_1" style="display: none;">
+       <label for="image_1" class="button upload">of upload een afbeelding</label>
+      </div>
+      <div class="sliderContainer">
+       <p class="label">Positie afbeelding links</p>
+       <div class="sliderBox">
+        <input type="range" min="-100" max="0" value="-50" id="slide_img-1_posx" class="slider">
+        <p class="sliderValue" id="slide_img-1_posx_output">X: -50%</p>
+       </div>
+       <div class="sliderBox">
+        <input type="range" min="-100" max="100" value="0" id="slide_img-1_posy" class="slider">
+        <p class="sliderValue" id="slide_img-1_posy_output">Y: -0%</p>
+       </div>
+      </div>
+     </div>
+     <div id="featured_floating_img-2">
+      <p class="label">Afbeelding midden</p>
+      <input type="text" id="imageurl_2">
+      <div class="button_div">
+       <input type="file" data-for="image" id="image_2" class="input" accept="image/gif, image/jpeg, image/png" name="image_2" style="display: none;">
+       <label for="image_2" class="button upload">of upload een afbeelding</label>
+      </div>
+      <div class="sliderContainer">
+       <p class="label">Positie afbeelding midden</p>
+       <div class="sliderBox">
+        <input type="range" min="-100" max="0" value="-50" id="slide_img-2_posx" class="slider">
+        <p class="sliderValue" id="slide_img-2_posx_output">X: -50%</p>
+       </div>
+       <div class="sliderBox">
+        <input type="range" min="-100" max="100" value="0" id="slide_img-2_posy" class="slider">
+        <p class="sliderValue" id="slide_img-2_posy_output">Y: -0%</p>
+       </div>
+      </div>
+     </div>
+     <div id="featured_floating_img-3">
+      <p class="label">Afbeelding rechts</p>
+      <input type="text" id="imageurl_3">
+      <div class="button_div">
+       <input type="file" data-for="image" id="image_3" class="input" accept="image/gif, image/jpeg, image/png" name="image_3" style="display: none;">
+       <label for="image_3" class="button upload">of upload een afbeelding</label>
+      </div>
+      <div class="sliderContainer">
+       <p class="label">Positie afbeelding rechts</p>
+       <div class="sliderBox">
+        <input type="range" min="-100" max="0" value="-50" id="slide_img-3_posx" class="slider">
+        <p class="sliderValue" id="slide_img-3_posx_output">X: -50%</p>
+       </div>
+       <div class="sliderBox">
+        <input type="range" min="-100" max="100" value="0" id="slide_img-3_posy" class="slider">
+        <p class="sliderValue" id="slide_img-3_posy_output">Y: -0%</p>
+       </div>
+      </div>
+     </div>
+     <button id="download" class="button download">Download de afbeelding</button>
+    </div>
+    <div id="output">
+     <h2>Featured floating</h2>
+     <div id="output_featured-floating" class="output general">
+       <div class="image_screen">
+        <div id="image_1">
+         <img src="./img/dummyimg.jpg" class="img_1" crossorigin="anonymous">
+        </div>
+        <div id="image_2">
+         <img src="./img/dummyimg.jpg" class="img_2" crossorigin="anonymous">
+        </div>
+        <div id="image_3">
+         <img src="./img/dummyimg.jpg" class="img_3" crossorigin="anonymous">
         </div>
        </div>
       </div>
      </div>
     </div>
    </div>
+  </div>
+  <div id="notificationBox">
+   <div class="notificationContent">
+    <i class="fas fa-file-export"></i>
+    <p>Even geduld! Je afbeelding komt eraan.</p>
+   </div>
+  </div>
  </body>
  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
  <script src="./js/dom-to-image-improved.js"></script>
@@ -252,6 +259,11 @@
 
    //Download de plaatjes
    $("#download").click(function(){
+    $("#notificationBox").addClass("show").delay(5000).queue(function(next){
+     $(this).removeClass("show");
+     next();
+    });
+
     var x = new Date();
     var y = x.getFullYear().toString();
     var m = (x.getMonth() + 1).toString();
