@@ -146,7 +146,7 @@ body,
  color: #dddddd;
 }
 
-#header .logobar i {
+#header .logobar div#mobMenuIcon {
  display: none;
 }
 
@@ -616,6 +616,39 @@ div.pillar {
  bottom: 0;
  left: -50%;
  margin: auto;
+}
+
+/* Notifcation box */
+#notificationBox {
+ width: 100%;
+ position: fixed;
+ bottom: -50px;
+ background-color: #11d3be;
+ border-top: 2px solid #009f74;
+ z-index: 99999;
+ transition-duration: 300ms;
+}
+
+#notificationBox.show {
+ bottom: 0px;
+}
+
+#notificationBox .notificationContent {
+ margin: 0px auto;
+ display: flex;
+ flex-flow: row;
+ align-items: center;
+ justify-content: center;
+ padding: 10px;
+}
+
+#notificationBox i {
+ color: #ffffff;
+ padding-right: 10px;
+}
+
+#notificationBox p {
+ color: #ffffff;
 }
 
 /* Large screens */
